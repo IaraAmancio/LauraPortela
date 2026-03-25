@@ -4,7 +4,7 @@ import { CgMenuRight } from "react-icons/cg";
 
 export function Header(){
     return(
-        <header className='w-full'>
+        <header className='w-full h-24'>
             <nav className='w-6xl max-w-full mx-auto flex justify-between items-end px-2 py-4'>
                 <a href='#'>
                         <img src={LogoLaura} className='h-14'/>
