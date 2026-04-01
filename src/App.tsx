@@ -3,6 +3,9 @@ import './App.css'
 import { Header } from './components/header'
 import FotoLaura from './assets/laura02.jpeg'
 import FotoLaura2 from './assets/laura05.png'
+import IconeCalculadora from './assets/icone calculadora.svg'
+import IconeGrafico from './assets/icone stonks.svg'
+import IconeSegurança from './assets/icone seguranca.svg'
 
 function App() {
 
@@ -10,7 +13,7 @@ function App() {
     <>
      <Header/>
      <main className='w-full bg-zinc-50/50'>
-      <section className="w-full mx-auto h-[calc(100vh-6rem)] bg-[url('./assets/bg.png')] bg-cover bg-center  flex md:flex-row flex-col md:gap-4"
+      <section className="w-full mx-auto h-[calc(100vh-6rem)] mt-24 bg-[url('./assets/bg.png')] bg-cover bg-center  flex md:flex-row flex-col md:gap-4"
       >      
         <div className='flex flex-1 flex-col justify-center px-4'>
           <div className='w-full md:max-w-10/12 mx-auto'>
@@ -29,14 +32,37 @@ function App() {
       <section id='sobre' className='w-full bg-gold-primary mx-auto pb-8 pt-24'>
         <div className='w-full max-w-5xl mx-auto flex md:flex-row flex-col items-center gap-4'>
           <div className='flex-1'>
-            <img src={FotoLaura} className='rounded-md h-150 w-125 object-cover'/>            
+            <img src={FotoLaura} className='px-4 rounded-md h-150 w-125 object-cover'/>            
           </div>
 
-          <div className='flex-1'>
-            <h1 className='text-5xl font-bold'>Excelência em Contabilidade</h1>
-            <p>
-              Oferecemos soluções contábeis personalizadas com foco em gestão financeira estratégica e compliance empresarial.
+          <div className='flex-1 flex flex-col gap-1 px-4'>
+            <h1 className='md:text-5xl text-4xl font-bold text-white'>Excelência em Contabilidade</h1>
+            <p className='text-zinc-100 text-lg'>
+              Ofereço soluções contábeis personalizadas com foco em gestão financeira estratégica e compliance empresarial.
             </p>
+            <div className='mt-8 flex flex-col gap-6'>
+              <section className='flex items-center gap-4'>
+                <img src={IconeCalculadora} className='w-16'/>
+                <div>
+                  <h1 className='font-semibold text-lg text-white'>Organização Financeira</h1>
+                  <p className='text-base text-zinc-200 leading-5'>Sua contabilidade em dia, com números claros e sem complicação.</p>
+                </div>
+              </section>
+              <section className='flex items-center gap-4'>
+                <img src={IconeGrafico} className='w-16'/>
+                <div>
+                  <h1 className='font-semibold text-lg text-white'>Crescimento Sustentável</h1>
+                  <p className='text-base text-zinc-200 leading-5'>Estratégias contábeis que ajudam seu negócio a evoluir com segurança.</p>
+                </div>
+              </section>
+              <section className='flex items-center gap-4'>
+                <img src={IconeSegurança} className='w-16'/>
+                <div>
+                  <h1 className='font-semibold text-lg text-white'>Segurança Fiscal</h1>
+                  <p className='text-base text-zinc-200 leading-5'>Fique regularizado e evite problemas com o fisco.</p>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
         
