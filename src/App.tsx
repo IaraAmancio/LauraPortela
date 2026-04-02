@@ -7,6 +7,8 @@ import IconeCalculadora from './assets/icone calculadora.svg'
 import IconeGrafico from './assets/icone stonks.svg'
 import IconeSegurança from './assets/icone seguranca.svg'
 
+import { motion } from "framer-motion"
+
 function App() {
 
   return (
@@ -41,27 +43,50 @@ function App() {
               Ofereço soluções contábeis personalizadas com foco em gestão financeira estratégica e compliance empresarial.
             </p>
             <div className='mt-8 flex flex-col gap-6'>
-              <section className='flex items-center gap-4'>
-                <img src={IconeCalculadora} className='w-16'/>
-                <div>
-                  <h1 className='font-semibold text-lg text-white'>Organização Financeira</h1>
-                  <p className='text-base text-zinc-200 leading-5'>Sua contabilidade em dia, com números claros e sem complicação.</p>
-                </div>
-              </section>
-              <section className='flex items-center gap-4'>
-                <img src={IconeGrafico} className='w-16'/>
-                <div>
-                  <h1 className='font-semibold text-lg text-white'>Crescimento Sustentável</h1>
-                  <p className='text-base text-zinc-200 leading-5'>Estratégias contábeis que ajudam seu negócio a evoluir com segurança.</p>
-                </div>
-              </section>
-              <section className='flex items-center gap-4'>
-                <img src={IconeSegurança} className='w-16'/>
-                <div>
-                  <h1 className='font-semibold text-lg text-white'>Segurança Fiscal</h1>
-                  <p className='text-base text-zinc-200 leading-5'>Fique regularizado e evite problemas com o fisco.</p>
-                </div>
-              </section>
+              <motion.div
+                 initial={{ opacity: 0, x: 100 }} // Estado inicial (invisível e abaixo)
+                  whileInView={{ opacity: 1, x: 0 }}  // Estado final (visível e na posição)
+                  transition={{ duration: 0.8 }}   // Duração da animação
+                  viewport={{once:false, amount:0.3}}
+              >
+                <section className='flex items-center gap-4 transition-all hover:scale-105 hover:duration-300 cursor-default'>
+                  <img src={IconeCalculadora} className='w-16'/>
+                  <div>
+                    <h1 className='font-semibold text-lg text-white'>Organização Financeira</h1>
+                    <p className='text-base text-zinc-200 leading-5'>Sua contabilidade em dia, com números claros e sem complicação.</p>
+                  </div>
+                </section>  
+              </motion.div>
+            
+              <motion.div
+                initial={{ opacity: 0, x: 100 }} // Estado inicial (invisível e abaixo)
+                  whileInView={{ opacity: 1, x: 0 }}  // Estado final (visível e na posição)
+                  transition={{ duration: 0.8 }}   // Duração da animação
+                  viewport={{once:false, amount:0.3}}
+              >
+                <section className='flex items-center gap-4 transition-all hover:scale-105 hover:duration-300 cursor-default'>
+                  <img src={IconeGrafico} className='w-16'/>
+                  <div>
+                    <h1 className='font-semibold text-lg text-white'>Crescimento Sustentável</h1>
+                    <p className='text-base text-zinc-200 leading-5'>Estratégias contábeis que ajudam seu negócio a evoluir com segurança.</p>
+                  </div>
+                </section>
+              </motion.div>
+
+              <motion.div
+                 initial={{ opacity: 0, x: 100 }} // Estado inicial (invisível e abaixo)
+                  whileInView={{ opacity: 1, x: 0 }}  // Estado final (visível e na posição)
+                  transition={{ duration: 0.8 }}   // Duração da animação
+                  viewport={{once:false, amount:0.3}}
+              >
+                <section className='flex items-center gap-4 transition-all hover:scale-105 hover:duration-300 cursor-default'>
+                  <img src={IconeSegurança} className='w-16'/>
+                  <div>
+                    <h1 className='font-semibold text-lg text-white'>Segurança Fiscal</h1>
+                    <p className='text-base text-zinc-200 leading-5'>Fique regularizado e evite problemas com o fisco.</p>
+                  </div>
+                </section>
+              </motion.div>
             </div>
           </div>
         </div>
