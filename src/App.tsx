@@ -7,6 +7,7 @@ import IconeCalculadora from './assets/icone calculadora.svg'
 import IconeGrafico from './assets/icone stonks.svg'
 import IconeSegurança from './assets/icone seguranca.svg'
 
+
 import { motion } from "framer-motion"
 
 function App() {
@@ -31,15 +32,15 @@ function App() {
         <img src={FotoLaura2} className='flex-1 h-full object-cover object-[center_10%]'/>      
       </section>
 
-      <section id='sobre' className='w-full bg-gold-primary mx-auto pb-8 pt-24'>
+      <section id='sobre' className='w-full bg-[url("./assets/bg-cinza.png")] bg-cover mx-auto pb-8 pt-24'>
         <div className='w-full max-w-5xl mx-auto flex md:flex-row flex-col items-center gap-4'>
           <div className='flex-1'>
             <img src={FotoLaura} className='px-4 rounded-md h-150 w-125 object-cover'/>            
           </div>
 
           <div className='flex-1 flex flex-col gap-1 px-4'>
-            <h1 className='md:text-5xl text-4xl font-bold text-white'>Excelência em Contabilidade</h1>
-            <p className='text-zinc-100 text-lg'>
+            <h1 className='md:text-5xl text-4xl font-bold text-white'>Excelência em <span className='text-gold-primary'>Contabilidade</span></h1>
+            <p className='text-zinc-100 text-lg mt-4'>
               Ofereço soluções contábeis personalizadas com foco em gestão financeira estratégica e compliance empresarial.
             </p>
             <div className='mt-8 flex flex-col gap-6'>
