@@ -6,6 +6,8 @@ import FotoLaura2 from './assets/laura05.png'
 import IconeCalculadora from './assets/icone calculadora.svg'
 import IconeGrafico from './assets/icone stonks.svg'
 import IconeSegurança from './assets/icone seguranca.svg'
+import { IoIosCalculator } from "react-icons/io";
+
 
 
 import { motion } from "framer-motion"
@@ -93,6 +95,22 @@ function App() {
         </div>
         
       </section>
+
+      <section className='w-full mt-12 min-h-[calc(100vh-6rem)]' id='servicos'>
+        <div className='max-w-5xl mx-auto flex flex-col items-center px-4'>
+          <h1 className='md:text-5xl text-4xl font-bold text-gold-primary'>Meus Serviços</h1>
+          <p className='text-lg text-gray-primary m-2'>Soluções completas em contabilidade e gestão financeira para o seu negócio</p>
+          <div className='grid md:grid-cols-3 grid-cols-1 gap-4 mt-12'>
+            <section className='bg-zinc-100/80 py-4 w-78 rounded-lg flex flex-col items-center justify-center px-2 transition-all hover:scale-105 hover:bg-zinc-200 shadow-2xl'>
+                <IoIosCalculator size={90} color='#ba8a1b'/>
+                <h3 className='text-xl mt-3 font-medium text-gray-primary'>Contabilidade Geral</h3>
+                <p className='text-center text-sm text-gray-primary/95'>Escrituração contábil completa, balanços e demonstrações financeiras.</p>
+            </section>
+        
+          </div>
+        </div>
+      </section>
+
 
      </main>
     </>
