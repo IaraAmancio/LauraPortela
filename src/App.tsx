@@ -7,10 +7,13 @@ import IconeCalculadora from './assets/icone calculadora.svg'
 import IconeGrafico from './assets/icone stonks.svg'
 import IconeSegurança from './assets/icone seguranca.svg'
 import { IoIosCalculator } from "react-icons/io";
+import { AiTwotoneFileText } from "react-icons/ai";
+import { RiBuilding2Fill } from "react-icons/ri";
 
 
 
 import { motion } from "framer-motion"
+
 
 function App() {
 
@@ -101,10 +104,20 @@ function App() {
           <h1 className='md:text-5xl text-4xl font-bold text-gold-primary'>Meus Serviços</h1>
           <p className='text-lg text-gray-primary m-2'>Soluções completas em contabilidade e gestão financeira para o seu negócio</p>
           <div className='grid md:grid-cols-3 grid-cols-1 gap-4 mt-12'>
-            <section className='bg-zinc-100/80 py-4 w-78 rounded-lg flex flex-col items-center justify-center px-2 transition-all hover:scale-105 hover:bg-zinc-200 shadow-2xl'>
+            <section className='bg-zinc-50 py-4 w-78 rounded-2xl flex flex-col items-center justify-center px-2 transition-all hover:scale-105 hover:bg-white drop-shadow-lg'>
+                <RiBuilding2Fill size={90} color='#ba8a1b'/>
+                <h3 className='text-xl mt-3 font-medium text-gray-primary'>Abertura de empresas</h3>
+                <p className='text-center text-sm text-gray-primary/95'>Cuidamos de todo o processo para abrir ou regularizar sua empresa com segurança.</p>
+            </section>
+            <section className='bg-zinc-50 py-4 w-78 rounded-2xl flex flex-col items-center justify-center px-2 transition-all hover:scale-105 hover:bg-white drop-shadow-lg'>
+                <AiTwotoneFileText size={90} color='#ba8a1b'/>
+                <h3 className='text-xl mt-3 font-medium text-gray-primary'>Documentos fiscais</h3>
+                <p className='text-center text-sm text-gray-primary/95'>Emitimos e organizamos suas notas fiscais, evitando erros e complicações.</p>
+            </section>
+            <section className='bg-zinc-50 py-4 w-78 rounded-2xl flex flex-col items-center justify-center px-2 transition-all hover:scale-105 hover:bg-white drop-shadow-lg'>
                 <IoIosCalculator size={90} color='#ba8a1b'/>
-                <h3 className='text-xl mt-3 font-medium text-gray-primary'>Contabilidade Geral</h3>
-                <p className='text-center text-sm text-gray-primary/95'>Escrituração contábil completa, balanços e demonstrações financeiras.</p>
+                <h3 className='text-xl mt-3 font-medium text-gray-primary'>Planejamento tributário</h3>
+                <p className='text-center text-sm text-gray-primary/95'>Estratégias legais para reduzir impostos e melhorar seus resultados.</p>
             </section>
         
           </div>
