@@ -7,8 +7,11 @@ import IconeCalculadora from './assets/icone calculadora.svg'
 import IconeGrafico from './assets/icone stonks.svg'
 import IconeSegurança from './assets/icone seguranca.svg'
 import { IoIosCalculator } from "react-icons/io";
-import { AiTwotoneFileText } from "react-icons/ai";
+import { IoDocumentTextOutline } from "react-icons/io5";
 import { RiBuilding2Fill } from "react-icons/ri";
+import { FaUsers } from "react-icons/fa";
+import { FaHeadset } from "react-icons/fa";
+import { HiOutlinePresentationChartLine } from "react-icons/hi2";
 
 
 
@@ -20,8 +23,8 @@ function App() {
   return (
     <>
      <Header/>
-     <main className='w-full bg-zinc-50/50'>
-      <section className="w-full mx-auto h-[calc(100vh-6rem)] mt-24 bg-[url('./assets/bg.png')] bg-cover bg-center  flex md:flex-row flex-col md:gap-4"
+     <main className='w-full bg-zinc-50/50 overflow-x-hidden'>
+      <section className="w-full mx-auto h-[calc(100vh-6rem)] mt-24 flex md:flex-row flex-col md:gap-4"
       >      
         <div className='flex flex-1 flex-col justify-center px-4'>
           <div className='w-full md:max-w-10/12 mx-auto'>
@@ -34,7 +37,7 @@ function App() {
               </p> 
           </div>                  
         </div>
-        <img src={FotoLaura2} className='flex-1 h-full object-cover object-[center_10%]'/>      
+      {/*<img src={FotoLaura2} className='flex-1 h-full object-cover object-[center_10%]'/>*/}      
       </section>
 
       <section id='sobre' className='w-full bg-[url("./assets/bg-cinza.png")] bg-cover mx-auto pb-8 pt-24'>
@@ -103,22 +106,84 @@ function App() {
         <div className='max-w-5xl mx-auto flex flex-col items-center px-4'>
           <h1 className='md:text-5xl text-4xl font-bold text-gold-primary'>Meus Serviços</h1>
           <p className='text-lg text-gray-primary m-2'>Soluções completas em contabilidade e gestão financeira para o seu negócio</p>
-          <div className='grid md:grid-cols-3 grid-cols-1 gap-4 mt-12'>
-            <section className='bg-zinc-50 py-4 w-78 rounded-2xl flex flex-col items-center justify-center px-2 transition-all hover:scale-105 hover:bg-white drop-shadow-lg'>
-                <RiBuilding2Fill size={90} color='#ba8a1b'/>
-                <h3 className='text-xl mt-3 font-medium text-gray-primary'>Abertura de empresas</h3>
-                <p className='text-center text-sm text-gray-primary/95'>Cuidamos de todo o processo para abrir ou regularizar sua empresa com segurança.</p>
-            </section>
-            <section className='bg-zinc-50 py-4 w-78 rounded-2xl flex flex-col items-center justify-center px-2 transition-all hover:scale-105 hover:bg-white drop-shadow-lg'>
-                <AiTwotoneFileText size={90} color='#ba8a1b'/>
-                <h3 className='text-xl mt-3 font-medium text-gray-primary'>Documentos fiscais</h3>
-                <p className='text-center text-sm text-gray-primary/95'>Emitimos e organizamos suas notas fiscais, evitando erros e complicações.</p>
-            </section>
-            <section className='bg-zinc-50 py-4 w-78 rounded-2xl flex flex-col items-center justify-center px-2 transition-all hover:scale-105 hover:bg-white drop-shadow-lg'>
-                <IoIosCalculator size={90} color='#ba8a1b'/>
-                <h3 className='text-xl mt-3 font-medium text-gray-primary'>Planejamento tributário</h3>
-                <p className='text-center text-sm text-gray-primary/95'>Estratégias legais para reduzir impostos e melhorar seus resultados.</p>
-            </section>
+          <div className='grid md:grid-cols-3 grid-cols-1 gap-8 mt-12'>
+            <motion.div
+            initial={{opacity: 0, y:-100}}
+            whileInView={{opacity:1 , y:0}}
+            transition={{duration: 0.8}}
+            viewport={{once:false, amount: 0.3}}
+            >
+                <section className='bg-zinc-50 h-54 w-78 rounded-2xl flex flex-col items-center justify-center px-2 transition-all hover:scale-105 hover:bg-white drop-shadow-lg cursor-default'>
+                  <RiBuilding2Fill size={90} color='#ba8a1b'/>
+                  <h3 className='text-xl mt-3 font-medium text-gray-primary'>Abertura de empresas</h3>
+                  <p className='text-center text-sm text-gray-primary/95'>Cuidamos de todo o processo para abrir ou regularizar sua empresa com segurança.</p>
+                </section>
+            </motion.div>
+            
+            <motion.div
+            initial={{opacity: 0, y:-100}}
+            whileInView={{opacity:1 , y:0}}
+            transition={{duration: 0.8}}
+            viewport={{once:false, amount: 0.3}}
+            >
+              <section className='bg-zinc-50 h-54 w-78 rounded-2xl flex flex-col items-center justify-center px-2 transition-all hover:scale-105 hover:bg-white drop-shadow-lg cursor-default'>
+                  <IoDocumentTextOutline size={90} color='#ba8a1b'/>
+                  <h3 className='text-xl mt-3 font-medium text-gray-primary'>Documentos fiscais</h3>
+                  <p className='text-center text-sm text-gray-primary/95'>Emitimos e organizamos suas notas fiscais, evitando erros e complicações.</p>
+              </section>
+            </motion.div>
+
+            <motion.div
+            initial={{opacity: 0, y:-100}}
+            whileInView={{opacity:1 , y:0}}
+            transition={{duration: 0.8}}
+            viewport={{once:false, amount: 0.3}}
+            >
+              <section className='bg-zinc-50 h-54 w-78 rounded-2xl flex flex-col items-center justify-center px-2 transition-all hover:scale-105 hover:bg-white drop-shadow-lg cursor-default'>
+                  <IoIosCalculator size={90} color='#ba8a1b'/>
+                  <h3 className='text-xl mt-3 font-medium text-gray-primary'>Planejamento tributário</h3>
+                  <p className='text-center text-sm text-gray-primary/95'>Estratégias legais para reduzir impostos e melhorar seus resultados.</p>
+              </section>
+            </motion.div>
+
+            <motion.div
+            initial={{opacity: 0, y:-100}}
+            whileInView={{opacity:1 , y:0}}
+            transition={{duration: 0.8}}
+            viewport={{once:false, amount: 0.3}}
+            >
+                <section className='bg-zinc-50 h-54 w-78 rounded-2xl flex flex-col items-center justify-center px-2 transition-all hover:scale-105 hover:bg-white drop-shadow-lg cursor-default'>
+                  <FaUsers size={90} color='#ba8a1b'/>
+                  <h3 className='text-xl mt-3 font-medium text-gray-primary'>Folha de pagamento</h3>
+                  <p className='text-center text-sm text-gray-primary/95'>Gerenciamos salários, encargos e obrigações trabalhistas.</p>
+                </section>
+            </motion.div>
+            
+            <motion.div
+            initial={{opacity: 0, y:-100}}
+            whileInView={{opacity:1 , y:0}}
+            transition={{duration: 0.8}}
+            viewport={{once:false, amount: 0.3}}
+            >
+              <section className='bg-zinc-50 h-54 w-78 rounded-2xl flex flex-col items-center justify-center px-2 transition-all hover:scale-105 hover:bg-white drop-shadow-lg cursor-default'>
+                  <FaHeadset size={90} color='#ba8a1b'/>
+                  <h3 className='text-xl mt-3 font-medium text-gray-primary'>Suporte contábil</h3>
+                  <p className='text-center text-sm text-gray-primary/95'>Atendimento completo para MEI, ME e outros regimes empresariais.</p>
+              </section>
+            </motion.div>
+
+            <motion.div
+            initial={{opacity: 0, y:-100}}
+            whileInView={{opacity:1 , y:0}}
+            transition={{duration: 0.8}}
+            viewport={{once:false, amount: 0.3}}
+            >
+              <section className='bg-zinc-50 h-54 w-78 rounded-2xl flex flex-col items-center justify-center px-2 transition-all hover:scale-105 hover:bg-white drop-shadow-lg cursor-default'>
+                  <HiOutlinePresentationChartLine size={90} color='#ba8a1b'/>
+                  <h3 className='text-xl mt-3 font-medium text-gray-primary'>Consultoria estratégica</h3>
+                  <p className='text-center text-sm text-gray-primary/95'>Orientação para decisões mais seguras e crescimento do seu negócio.</p>
+              </section>
+            </motion.div>
         
           </div>
         </div>
