@@ -2,7 +2,6 @@
 import './App.css'
 import { Header } from './components/header'
 import FotoLaura from './assets/laura02.jpeg'
-import FotoLaura2 from './assets/laura05.png'
 import IconeCalculadora from './assets/icone calculadora.svg'
 import IconeGrafico from './assets/icone stonks.svg'
 import IconeSegurança from './assets/icone seguranca.svg'
@@ -12,6 +11,7 @@ import { RiBuilding2Fill } from "react-icons/ri";
 import { FaUsers } from "react-icons/fa";
 import { FaHeadset } from "react-icons/fa";
 import { HiOutlinePresentationChartLine } from "react-icons/hi2";
+import { FaWhatsapp } from "react-icons/fa";
 
 
 
@@ -24,6 +24,11 @@ function App() {
     <>
      <Header/>
      <main className='w-full bg-zinc-50/50 overflow-x-hidden'>
+     <div className='p-3 bg-green-600 rounded-full fixed bottom-4 right-4'>
+      <a href='https://w.app/lauraportela'>
+        <FaWhatsapp color='white' size={38}/>
+      </a>
+     </div>
       <section className="w-full mx-auto h-[calc(100vh-6rem)] mt-24 flex md:flex-row flex-col md:gap-4"
       >      
         <div className='flex flex-1 flex-col justify-center px-4'>
@@ -37,7 +42,7 @@ function App() {
               </p> 
           </div>                  
         </div>
-      {/*<img src={FotoLaura2} className='flex-1 h-full object-cover object-[center_10%]'/>*/}      
+      {/*<img src={FotoLaura} className='flex-1 h-full object-cover object-[center_10%]'/>   */}
       </section>
 
       <section id='sobre' className='w-full bg-[url("./assets/bg-cinza.png")] bg-cover mx-auto pb-8 pt-24'>
