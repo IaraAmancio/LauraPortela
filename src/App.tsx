@@ -2,6 +2,7 @@
 import './App.css'
 import { Header } from './components/header'
 import FotoLaura from './assets/laura02.jpeg'
+import FotoLauraPrincipal from './assets/laura05.webp'
 import IconeCalculadora from './assets/icone calculadora.svg'
 import IconeGrafico from './assets/icone stonks.svg'
 import IconeSegurança from './assets/icone seguranca.svg'
@@ -29,20 +30,20 @@ function App() {
         <FaWhatsapp color='white' size={38}/>
       </a>
      </div>
-      <section className="w-full mx-auto h-[calc(100vh-6rem)] mt-24 flex md:flex-row flex-col md:gap-4"
+      <section className="w-full mx-auto h-[calc(100vh-6rem)] md:mt-24 mt-32 flex md:flex-row flex-col md:gap-4"
       >      
         <div className='flex flex-1 flex-col justify-center px-4'>
           <div className='w-full md:max-w-10/12 mx-auto'>
 
               <h2 className='text-4xl font-semibold text-gold-primary'>Contadora</h2>
-              <h1 className='md:text-7xl text-5xl font-bold text-gold-primary mb-2 -mt-3'>Laura Portela</h1>
-              <p className='text-gray-primary/90 text-xl'>
+              <h1 className='md:text-7xl text-5xl font-bold text-gold-primary mb-2 md:-mt-3'>Laura Portela</h1>
+              <p className='text-gray-primary/90 md:text-xl text-base'>
                Especialista em contabilidade para Pessoa Física e Jurídica.
               <br></br><br></br>Cuido da burocracia para você focar no seu negócio, com organização e segurança.
               </p> 
           </div>                  
         </div>
-      {/*<img src={FotoLaura} className='flex-1 h-full object-cover object-[center_10%]'/>   */}
+      <img src={FotoLauraPrincipal} className='flex-1 h-full object-cover object-[center_10%]'/>   
       </section>
 
       <section id='sobre' className='w-full bg-[url("./assets/bg-cinza.png")] bg-cover mx-auto pb-8 pt-24'>
